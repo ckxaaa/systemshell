@@ -1,0 +1,8 @@
+#!/bin/bash
+size=du -s | grep filename | awk '{print 1}'
+filename="Test"
+#以kb为单位(5G)
+delect=5242880
+if [ $size -gt $delect ]
+    rm -rf filename
+fi
